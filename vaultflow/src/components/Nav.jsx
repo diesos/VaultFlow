@@ -45,6 +45,7 @@ export const Nav = () => {
     padding: 10px 20px;
     align-self: center;
     background-color: #ececec;
+    color: black;
   `;
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>

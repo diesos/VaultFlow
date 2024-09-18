@@ -1,7 +1,13 @@
-*{
+* {
   padding: 0px;
   box-sizing: border-box;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
+html {
+  background-image: url(./assets/bg-gradient.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
