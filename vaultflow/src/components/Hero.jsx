@@ -47,6 +47,15 @@ const StyledButton = styled.button`
   background-color: #ececec;
   color: black;
 `;
+
+const HeroImg = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 24px;
+`;
 export const Hero = () => {
   return (
     <>
@@ -61,11 +70,9 @@ export const Hero = () => {
           <StyledButton>Download the app</StyledButton>
           <HeroButton>Talk to an expert</HeroButton>
         </div>
-        <img
-          src={dashboard}
-          alt="Logo"
-          style={{ scale: "0.6", alignSelf: "stretch" }}
-        ></img>
+        <HeroImg className="hero-img">
+          <img src={dashboard} style=></img>
+        </HeroImg>
       </HeroSection>
     </>
   );
