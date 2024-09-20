@@ -5,8 +5,10 @@ const HeroSection = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: clamp(40px, 30px, 80px);
-  gap: 24px;
+  width: clamp(80%, 4em, 80%);
+  margin: auto;
+  margin-top: 25px;
+  gap: 2rem;
   flex: 1 0 0;
   align-self: stretch;
   align-items: center;
@@ -38,6 +40,10 @@ const HeroButton = styled.button`
   font-weight: 400;
   line-height: 150%;
   flex-grow: 0;
+  transition: background-color 0.6s ease-out;
+  &:hover {
+    background-color: blueviolet;
+  }
 `;
 const StyledButton = styled.button`
   border: none;
@@ -46,15 +52,15 @@ const StyledButton = styled.button`
   align-self: center;
   background-color: #ececec;
   color: black;
+  transition: background-color 0.6s ease-in-out;
+  &:hover {
+    background-color: #edbd2b;
+  }
 `;
 
 const HeroImg = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 472px;
   align-self: stretch;
-  border-radius: 24px;
 `;
 export const Hero = () => {
   return (
@@ -70,9 +76,7 @@ export const Hero = () => {
           <StyledButton>Download the app</StyledButton>
           <HeroButton>Talk to an expert</HeroButton>
         </div>
-        <HeroImg className="hero-img">
-          <img src={dashboard} style=></img>
-        </HeroImg>
+        <HeroImg className="hero-img"></HeroImg>
       </HeroSection>
     </>
   );
