@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import dashboard from "../assets/dashboard.png";
 
 const HeroSection = styled.section`
   display: flex;
@@ -60,6 +61,11 @@ export const Hero = () => {
           <StyledButton>Download the app</StyledButton>
           <HeroButton>Talk to an expert</HeroButton>
         </div>
+        <img
+          src={dashboard}
+          alt="Logo"
+          style={{ scale: "0.6", alignSelf: "stretch" }}
+        ></img>
       </HeroSection>
     </>
   );
