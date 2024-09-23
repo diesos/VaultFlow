@@ -6,6 +6,7 @@ import LogoPacific from "../assets/logo/logo-pacific-funds.svg";
 import LogoNcr from "../assets/logo/logo-ncr.svg";
 import LogoLattice from "../assets/logo/logo-lattice.svg";
 import LogoTED from "../assets/logo/logo-ted.svg";
+import { Cards } from "./Cards";
 
 const StyledSection = styled.section`
   display: flex;
@@ -78,6 +79,7 @@ export const Features = () => {
             <span> power of Vaultflow for yourself.</span>
           </p>
         </div>
+        <Cards />
       </StyledSection>
     </>
   );
