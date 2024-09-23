@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/icon1.png";
 import Logo2 from "../assets/icon2.png";
+import Logo3 from "../assets/icon3.png";
+import Image from "../assets/image.png";
 
 const Card = styled.div`
   width: 90%;
@@ -29,7 +31,7 @@ const StyledParagraph = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 21px */
+  line-height: 150%;
 `;
 
 const StyledLink = styled.p`
@@ -53,7 +55,6 @@ export const Cards = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Check initial screen size
     handleResize();
 
     return () => {
@@ -102,6 +103,26 @@ export const Cards = () => {
           </div>
         </Card>
       </div>
+      <Card>
+        <img src={Logo3}></img>
+        <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+          >
+            <h3>Code collaboration</h3>
+            <StyledParagraph>
+              Our advanced code synchronization technology ensures that your
+              data is always up-to-date and accurate, no matter where it's
+              coming from. Whether you're integrating data from multiple sources
+              or working with a team of developers, our synchronization
+              technology makes it easy to collaborate and ensure that your data
+              is consistent and reliable.
+              <StyledLink>View code collaboration</StyledLink>
+            </StyledParagraph>
+          </div>
+          <img src={Image} />
+        </div>
+      </Card>
     </>
   );
 };
