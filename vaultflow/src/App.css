@@ -20,3 +20,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+p span {
+  display: block;
+}

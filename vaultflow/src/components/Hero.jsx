@@ -61,6 +61,7 @@ const StyledButton = styled.button`
 const HeroImg = styled.div`
   height: 472px;
   align-self: stretch;
+  margin-bottom: -50px;
 `;
 export const Hero = () => {
   return (
