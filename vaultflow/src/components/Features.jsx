@@ -42,11 +42,12 @@ export const Features = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            gap: "48px",
+            gap: "40px",
             alignSelf: "stretch",
             width: "80%",
             margin: "auto",
             flexWrap: "wrap",
+            marginBottom: "10px",
           }}
         >
           <img src={Logodell} />
@@ -57,7 +58,14 @@ export const Features = () => {
           <img src={LogoLattice} alt="Logo" />
           <img src={LogoTED} alt="Logo" />
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "24px",
+            padding: "10px",
+          }}
+        >
           <StyledFeature>
             <p>
               <span>Features that</span>
