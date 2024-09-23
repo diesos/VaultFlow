@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/icon1.png";
 import Logo2 from "../assets/icon2.png";
@@ -41,35 +42,66 @@ const StyledLink = styled.p`
   text-decoration-line: underline;
   margin-top: 16px;
 `;
-export const Cards = (props) => {
+
+export const Cards = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 780);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Check initial screen size
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
-      <Card>
-        <img src={Logo}></img>
-        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          <h3>Analytics Dashboard</h3>
-          <StyledParagraph>
-            Our Analytics Dashboard provides a clear and intuitive interface for
-            you to easily analyze your data. From customizable graphs to
-            real-time data updates, our dashboard offers everything you need to
-            gain valuable insights.
-            <StyledLink>View dashboard</StyledLink>
-          </StyledParagraph>
-        </div>
-      </Card>
-      <Card>
-        <img src={Logo2}></img>
-        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          <h3>Digital Credit Tokens</h3>
-          <StyledParagraph>
-            Reward your customers and incentivize engagement with our innovative
-            digital credit tokens. Our tokens can be customized to match your
-            branding, and are a flexible and scalable way to drive customer
-            loyalty and encourage repeat business.
-            <StyledLink>View tokens</StyledLink>
-          </StyledParagraph>
-        </div>
-      </Card>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "24px",
+          width: "90%",
+          flexWrap: isSmallScreen ? "wrap" : "nowrap",
+        }}
+      >
+        <Card>
+          <img src={Logo}></img>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+          >
+            <h3>Analytics Dashboard</h3>
+            <StyledParagraph>
+              Our Analytics Dashboard provides a clear and intuitive interface
+              for you to easily analyze your data. From customizable graphs to
+              real-time data updates, our dashboard offers everything you need
+              to gain valuable insights.
+              <StyledLink>View dashboard</StyledLink>
+            </StyledParagraph>
+          </div>
+        </Card>
+        <Card>
+          <img src={Logo2}></img>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+          >
+            <h3>Digital Credit Tokens</h3>
+            <StyledParagraph>
+              Reward your customers and incentivize engagement with our
+              innovative digital credit tokens. Our tokens can be customized to
+              match your branding, and are a flexible and scalable way to drive
+              customer loyalty and encourage repeat business.
+              <StyledLink>View tokens</StyledLink>
+            </StyledParagraph>
+          </div>
+        </Card>
+      </div>
     </>
   );
 };
