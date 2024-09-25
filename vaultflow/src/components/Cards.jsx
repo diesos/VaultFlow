@@ -56,7 +56,7 @@ export const Cards = () => {
     window.addEventListener("resize", handleResize);
 
     handleResize();
-
+    console.log(window.innerWidth);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -104,7 +104,7 @@ export const Cards = () => {
         </Card>
       </div>
       <Card>
-        <img src={Logo3}></img>
+        <img style={{background:}} src={Logo3}></img>
         <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
@@ -120,7 +120,10 @@ export const Cards = () => {
               <StyledLink>View code collaboration</StyledLink>
             </StyledParagraph>
           </div>
-          <img src={Image} />
+          <img
+            style={{ objectFit: "contain", width: "auto", scale: "1" }}
+            src={Image}
+          />
         </div>
       </Card>
     </>
