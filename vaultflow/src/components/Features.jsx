@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Logodell from "/logo/logo-dell.svg";
-import Logozendesk from "/logo/logo-zendesk.svg";
-import LogoRakuten from "/logo/logo-rakuten.svg";
-import LogoPacific from "/logo/logo-pacific-funds.svg";
-import LogoNcr from "/logo/logo-ncr.svg";
-import LogoLattice from "/logo/logo-lattice.svg";
-import LogoTED from "/logo/logo-ted.svg";
+import Logodell from "../assets/logo/logo-dell.svg";
+import Logozendesk from "../assets/logo/logo-zendesk.svg";
+import LogoRakuten from "../assets/logo/logo-rakuten.svg";
+import LogoPacific from "../assets/logo/logo-pacific-funds.svg";
+import LogoNcr from "../assets/logo/logo-ncr.svg";
+import LogoLattice from "../assets/logo/logo-lattice.svg";
+import LogoTED from "../assets/logo/logo-ted.svg";
 import { Cards } from "./Cards";
 
 const StyledSection = styled.section`

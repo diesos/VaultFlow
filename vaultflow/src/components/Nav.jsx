@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import logo from "/logo.svg";
+import logo from "../assets/logo.svg";
 import { Sling as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 
