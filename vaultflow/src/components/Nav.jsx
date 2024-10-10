@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { Sling as Hamburger } from "hamburger-react";
-import { Link } from "react-router-dom"; // Import nécessaire pour les balises Link
+import { Link } from "react-router-dom";
 
 export const Nav = () => {
   const [isOpen, setOpen] = useState(false);
