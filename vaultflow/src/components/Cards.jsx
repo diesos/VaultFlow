@@ -104,7 +104,7 @@ export const Cards = () => {
         </Card>
       </div>
       <Card>
-        <img style={{background:}} src={Logo3}></img>
+        <img src={Logo3}></img>
         <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}

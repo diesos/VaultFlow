@@ -41,8 +41,12 @@ const HeroButton = styled.button`
   line-height: 150%;
   flex-grow: 0;
   transition: background-color 0.6s ease-out;
+  transition: border-radius 0.3s ease;
   &:hover {
-    background-color: blueviolet;
+    background-color: #ececec;
+    border-radius: 10px;
+    transition: border-radius 0.3s ease;
+    color: black;
   }
 `;
 const StyledButton = styled.button`
