@@ -1,15 +1,18 @@
 import "./App.css";
 import "./index.css";
-import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { Features } from "./components/Features";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainPage } from "./components/MainPage.jsx";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Hero />
-      <Features />
+      <BrowserRouter>
+        <Routes>
+          <Route>
+            <Route path="/" element={<MainPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

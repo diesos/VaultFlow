@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import dashboard from "../assets/dashboard.png";
 
 const HeroSection = styled.section`
   display: flex;
