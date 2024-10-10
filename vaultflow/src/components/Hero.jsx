@@ -48,6 +48,9 @@ const HeroButton = styled.button`
     color: black;
   }
 `;
+
+export default HeroButton;
+
 const StyledButton = styled.button`
   border: none;
   border-radius: 50px;

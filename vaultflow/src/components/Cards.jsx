@@ -4,6 +4,7 @@ import Logo from "../assets/icon1.png";
 import Logo2 from "../assets/icon2.png";
 import Logo3 from "../assets/icon3.png";
 import Image from "../assets/image.png";
+import HeroButton from "./Hero.jsx";
 
 // Card styling
 const Card = styled.div`
@@ -98,7 +99,7 @@ export const Cards = () => {
   return (
     <>
       <CardsContainer>
-        <Card>
+        <Card style={{ alignItems: "center" }}>
           <img src={Logo} alt="Logo 1" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
@@ -172,6 +173,48 @@ export const Cards = () => {
               </div>
             </div>
             <Img src={Image} alt="Collaboration" />
+          </div>
+        </Card>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          width: "90%",
+          justifyContent: "center",
+          alignContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          gap: "16px",
+        }}
+      >
+        <Card>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "90%",
+              alignItems: "center",
+              textAlign: "center",
+              gap: "16px",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "48px",
+                fontWeight: "700",
+                lineHeight: "120%",
+              }}
+            >
+              {" "}
+              Our powerful analytics provides invaluable insights.
+            </p>
+            <StyledParagraph>
+              Unlock the power of data with our cutting-edge analytics product.
+              Get instant insights with our user-friendly Analytics Dashboard,
+              and take advantage of our innovative digital credit tokens to
+              reward your customers and incentivize engagement.
+            </StyledParagraph>
+            <HeroButton>View analytics</HeroButton>
           </div>
         </Card>
       </div>
