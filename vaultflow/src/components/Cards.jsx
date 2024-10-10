@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "./icon1.png";
-import Logo2 from "./icon2.png";
-import Logo3 from "./icon3.png";
-import Image from "./image.png";
+import Logo from "/icon1.png";
+import Logo2 from "/icon2.png";
+import Logo3 from "/icon3.png";
+import Image from "/image.png";
 import HeroButton from "./Hero.jsx";
 
 // Card styling

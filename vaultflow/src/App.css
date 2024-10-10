@@ -7,7 +7,7 @@
 }
 
 html {
-  background-image: url("./bg-gradient.jpg");
+  background-image: url("/bg-gradient.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-size: cover;
@@ -15,7 +15,7 @@ html {
 }
 
 .hero-img {
-  background-image: url("./dashboard.png");
+  background-image: url("/dashboard.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
