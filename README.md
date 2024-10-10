@@ -12,7 +12,7 @@ VaultFlow is a powerful and flexible platform designed to streamline workflows a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/vaultflow.git
+   git clone https://github.com/diesos/vaultflow.git
    ```
 2. Navigate to the project directory:
    ```bash
