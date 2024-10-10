@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/icon1.png";
 import Logo2 from "../assets/icon2.png";
 import Logo3 from "../assets/icon3.png";
-import Image from "../assets/image.png";
+import Dash from "../assets/image.png";
 import HeroButton from "./Hero.jsx";
 
 // Card styling
@@ -172,7 +172,7 @@ export const Cards = () => {
                 </StyledParagraph>
               </div>
             </div>
-            <Img src={Image} alt="Collaboration" />
+            <Img src={Dash} alt="Collaboration" />
           </div>
         </Card>
       </div>
