@@ -46,8 +46,8 @@ export const Features = () => {
         >
           <img src="/logo/logo-dell.svg" />
           <img src="/logo/logo-zendesk.svg" alt="Logo" />
-          <img src="/logo-rakuten.svg" alt="Logo" />
-          <img src="/logo-pacific-funds.svg" alt="Logo" />
+          <img src="/logo/logo-rakuten.svg" alt="Logo" />
+          <img src="/logo/logo-pacific-funds.svg" alt="Logo" />
           <img src="/logo/logo-ncr.svg" alt="Logo" />
           <img src="/logo/logo-lattice.svg" alt="Logo" />
           <img src="/logo/logo-ted.svg" alt="Logo" />
