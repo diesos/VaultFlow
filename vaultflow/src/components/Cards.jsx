@@ -5,15 +5,15 @@ import Logo2 from "../assets/icon2.png";
 import Logo3 from "../assets/icon3.png";
 import Image from "../assets/image.png";
 
+// Card styling
 const Card = styled.div`
-  width: 90%;
-  margin: auto;
+  flex-grow: 1;
+  width: 30%;
   display: flex;
   padding: 60px;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  align-self: stretch;
   border-radius: 20px;
   background: linear-gradient(
     180deg,
@@ -23,6 +23,26 @@ const Card = styled.div`
   box-shadow: 0px -2px 10px 0px rgba(233, 223, 255, 0.3),
     0px -2px 40px 0px rgba(187, 155, 255, 0.15),
     0px 0.5px 0px 0px rgba(255, 255, 255, 0.5) inset;
+
+  // Responsive behavior
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+`;
+
+// Flex container styling for cards
+const CardsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 90%;
+  flex-wrap: nowrap;
+
+  // For mobile devices (max-width 780px), stack the cards vertically
+  @media (max-width: 780px) {
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
 `;
 
 const StyledParagraph = styled.p`
@@ -40,11 +60,25 @@ const StyledLink = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   text-decoration-line: underline;
   margin-top: 16px;
 `;
 
+const Img = styled.img`
+  /* objectFit: "contain",
+  width: "100%",
+  maxHeight: "500px",
+  overflow: "hidden", */
+  object-fit: contain;
+  max-height: max-content;
+  overflow: contain;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px -2px 10px 0px rgba(233, 223, 255, 0.3),
+    0px -2px 40px 0px rgba(187, 155, 255, 0.15),
+    0px 0.5px 0px 0px rgba(255, 255, 255, 0.5) inset;
+`;
 export const Cards = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -56,24 +90,16 @@ export const Cards = () => {
     window.addEventListener("resize", handleResize);
 
     handleResize();
-    console.log(window.innerWidth);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "24px",
-          width: "90%",
-          flexWrap: isSmallScreen ? "wrap" : "nowrap",
-        }}
-      >
+      <CardsContainer>
         <Card>
-          <img src={Logo}></img>
+          <img src={Logo} alt="Logo 1" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
@@ -88,7 +114,7 @@ export const Cards = () => {
           </div>
         </Card>
         <Card>
-          <img src={Logo2}></img>
+          <img src={Logo2} alt="Logo 2" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
@@ -102,30 +128,53 @@ export const Cards = () => {
             </StyledParagraph>
           </div>
         </Card>
-      </div>
-      <Card>
-        <img src={Logo3}></img>
-        <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
+      </CardsContainer>
+      <div style={{ width: "90%", display: "flex", flexGrow: "1" }}>
+        <Card>
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+            style={
+              isSmallScreen
+                ? {
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
+                    maxWidth: "100%",
+                  }
+                : {
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "16px",
+                    maxWidth: "100%",
+                  }
+            }
           >
-            <h3>Code collaboration</h3>
-            <StyledParagraph>
-              Our advanced code synchronization technology ensures that your
-              data is always up-to-date and accurate, no matter where it's
-              coming from. Whether you're integrating data from multiple sources
-              or working with a team of developers, our synchronization
-              technology makes it easy to collaborate and ensure that your data
-              is consistent and reliable.
-              <StyledLink>View code collaboration</StyledLink>
-            </StyledParagraph>
+            <div style={{}}>
+              <img src={Logo3} alt="Logo 3" />
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                  maxWidth: "100%",
+                }}
+              >
+                <h3>Code collaboration</h3>
+                <StyledParagraph>
+                  Our advanced code synchronization technology ensures that your
+                  data is always up-to-date and accurate, no matter where it's
+                  coming from. Whether you're integrating data from multiple
+                  sources or working with a team of developers, our
+                  synchronization technology makes it easy to collaborate and
+                  ensure that your data is consistent and reliable.
+                  <StyledLink>View code collaboration</StyledLink>
+                </StyledParagraph>
+              </div>
+            </div>
+            <Img src={Image} alt="Collaboration" />
           </div>
-          <img
-            style={{ objectFit: "contain", width: "auto", scale: "1" }}
-            src={Image}
-          />
-        </div>
-      </Card>
+        </Card>
+      </div>
     </>
   );
 };

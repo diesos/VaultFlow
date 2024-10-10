@@ -169,7 +169,7 @@ export const Nav = () => {
                   rounded
                   distance="sm"
                   easing="ease-in"
-                  color={isOpen ? "white" : "white"}
+                  color="white"
                   size={40}
                   toggled={isOpen}
                   toggle={setOpen}
