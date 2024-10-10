@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
 import { Sling as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 
@@ -151,7 +150,7 @@ export const Nav = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Navbar>
           <DivLeft>
-            <img src={logo} alt="Logo" />
+            <img src="/logo.svg" alt="Logo" />
             <BoldParagraph>Vaultflow</BoldParagraph>
           </DivLeft>
           <DivMid>

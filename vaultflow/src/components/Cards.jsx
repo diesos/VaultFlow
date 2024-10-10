@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../assets/icon1.png";
-import Logo2 from "../assets/icon2.png";
-import Logo3 from "../assets/icon3.png";
-import Image from "../assets/image.png";
 import HeroButton from "./Hero.jsx";
 
 // Card styling
@@ -100,7 +96,7 @@ export const Cards = () => {
     <>
       <CardsContainer>
         <Card style={{ alignItems: "center" }}>
-          <img src={Logo} alt="Logo 1" />
+          <img src="/icon1.png" alt="Logo 1" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
@@ -115,7 +111,7 @@ export const Cards = () => {
           </div>
         </Card>
         <Card>
-          <img src={Logo2} alt="Logo 2" />
+          <img src="/icon2.png" alt="Logo 2" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
@@ -150,7 +146,7 @@ export const Cards = () => {
             }
           >
             <div style={{}}>
-              <img src={Logo3} alt="Logo 3" />
+              <img src="/icon3.png" alt="Logo 3" />
 
               <div
                 style={{
@@ -172,7 +168,7 @@ export const Cards = () => {
                 </StyledParagraph>
               </div>
             </div>
-            <ImgComponent src={Image} alt="Collaboration" />
+            <ImgComponent src="/image.png" alt="Collaboration" />
           </div>
         </Card>
       </div>

@@ -1,11 +1,4 @@
 import styled from "styled-components";
-import Logodell from "../assets/logo/logo-dell.svg";
-import Logozendesk from "../assets/logo/logo-zendesk.svg";
-import LogoRakuten from "../assets/logo/logo-rakuten.svg";
-import LogoPacific from "../assets/logo/logo-pacific-funds.svg";
-import LogoNcr from "../assets/logo/logo-ncr.svg";
-import LogoLattice from "../assets/logo/logo-lattice.svg";
-import LogoTED from "../assets/logo/logo-ted.svg";
 import { Cards } from "./Cards";
 
 const StyledSection = styled.section`
@@ -51,13 +44,13 @@ export const Features = () => {
             marginBottom: "10px",
           }}
         >
-          <img src={Logodell} />
-          <img src={Logozendesk} alt="Logo" />
-          <img src={LogoRakuten} alt="Logo" />
-          <img src={LogoPacific} alt="Logo" />
-          <img src={LogoNcr} alt="Logo" />
-          <img src={LogoLattice} alt="Logo" />
-          <img src={LogoTED} alt="Logo" />
+          <img src="/logo/logo-dell.svg" />
+          <img src="/logo/logo-zendesk.svg" alt="Logo" />
+          <img src="/logo-rakuten.svg" alt="Logo" />
+          <img src="/logo-pacific-funds.svg" alt="Logo" />
+          <img src="/logo/logo-ncr.svg" alt="Logo" />
+          <img src="/logo/logo-lattice.svg" alt="Logo" />
+          <img src="/logo/logo-ted.svg" alt="Logo" />
         </div>
         <div
           style={{
