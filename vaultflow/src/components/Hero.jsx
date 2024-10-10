@@ -76,8 +76,8 @@ export const Hero = () => {
         <HeroButton>We just raised $20M in Series B. Learn more</HeroButton>
         <HeroText>Modern analytics for the modern world</HeroText>
         <HeroSubText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+          We help teams at over 1,000 of the world’s leading organizations
+          unlock the power of their data
         </HeroSubText>
         <div style={{ display: "flex", gap: "16px" }}>
           <StyledButton>Download the app</StyledButton>
