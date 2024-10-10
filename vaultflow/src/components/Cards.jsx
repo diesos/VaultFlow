@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/icon1.png";
 import Logo2 from "../assets/icon2.png";
 import Logo3 from "../assets/icon3.png";
-import Dash from "../assets/image.png";
+import Image from "../assets/image.png";
 import HeroButton from "./Hero.jsx";
 
 // Card styling
@@ -66,7 +66,7 @@ const StyledLink = styled.p`
   margin-top: 16px;
 `;
 
-const Img = styled.img`
+const ImgComponent = styled.img`
   /* objectFit: "contain",
   width: "100%",
   maxHeight: "500px",
@@ -172,7 +172,7 @@ export const Cards = () => {
                 </StyledParagraph>
               </div>
             </div>
-            <Img src={Dash} alt="Collaboration" />
+            <ImgComponent src={Image} alt="Collaboration" />
           </div>
         </Card>
       </div>
