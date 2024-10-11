@@ -95,7 +95,7 @@ export const Cards = () => {
   return (
     <>
       <CardsContainer>
-        <Card style={{ alignItems: "center" }}>
+        <Card>
           <img src="/icon1.png" alt="Logo 1" />
           <div
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
@@ -146,7 +146,11 @@ export const Cards = () => {
             }
           >
             <div style={{}}>
-              <img src="/icon3.png" alt="Logo 3" />
+              <img
+                style={{ marginBottom: "16px" }}
+                src="/icon3.png"
+                alt="Logo 3"
+              />
 
               <div
                 style={{
@@ -168,7 +172,7 @@ export const Cards = () => {
                 </StyledParagraph>
               </div>
             </div>
-            <ImgComponent src="/image.png" alt="Collaboration" />
+            <ImgComponent src="/Image.png" alt="Collaboration" />
           </div>
         </Card>
       </div>
@@ -183,7 +187,7 @@ export const Cards = () => {
           gap: "16px",
         }}
       >
-        <Card>
+        <Card style={{ marginBottom: "60px", padding: "60px" }}>
           <div
             style={{
               display: "flex",
