@@ -7,6 +7,16 @@ const FooterSection = styled.footer`
   margin: 64px;
   padding: 24px;
   width: 90%;
+
+  @media only screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: center;
+    padding: 24px;
+    margin: auto;
+  }
 `;
 
 const FooterTitle = styled.p`
